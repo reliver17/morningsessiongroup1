@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+         
+        
+        <p> PIZZA ORDER FORM </p>
+        <input type="text" id="first">
+        <input type="text" id="last">
+        <button id="try">Click here</button>
+        <h1 id="text"></h1>
+        <script>
+    //     document.getElementById("try").addEventListener("click", function(){
+    //     document.getElementById("text").innerText = "GeeksforGeeks";
+    // });
+
+    var first = document.getElementById("first").value
+    var last = document.getElementById("last").value
+     if (first === "" || last ==="")
+        {document.getElementById("try").addEventListener("click", function(){
+        document.getElementById("text").innerText = "inputs required";
+    })};
+        </script>
+</body>
+</html>

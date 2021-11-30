@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    
+   <style>
+
+       body{
+        background-color: rgb(223, 231, 231);
+       }
+       .title{
+           text-align: center;
+           color: black;
+           font-weight: bold;
+           font-size: 50px;
+       }
+       a{
+           color: white;
+           padding: 5px 10px;
+           text-decoration: none;
+           font-size: 15px;
+       }
+       button{
+           height: 30px;
+           border-radius: 5px;
+       }
+       .glow{
+            background-color: rgb(95, 81, 81);
+            font-family: cursive;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        @-webkit-keyframes glow {
+            from{
+                text-shadow: 0 0 10px #0d963a, 0 0 20px #098b43, 0 0 30px #0a9120 0 0 40px #10a718 0 0 50px #1aca46 0 0 60px #22c74b 0 0 70px #26cf5f 0 0 80px #22d197 ; 
+            }
+            to{
+                text-shadow: 0 0 20px rgb(16, 163, 48), 0 0 30px #0ab326, 0 0 40px #25e665, 0 0 50px #21d348, 0 0 60px #1ccc6b, 0 0 70px #2bcc4e, 0 0 80px #1dc47e
+             }
+        }
+
+
+        #myBtn{
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color:green;
+            color: white;
+            cursor: pointer;
+            padding: 5px 5px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        #myBtn:hover{
+            background-color: #555;
+        }
+
+   </style>
+</head>
+<body>
+    <h1 class="title">LISTED PRODUCTS</h1><br><br>
+    <button class="glow"><a href="order.html">Order</a></button><br><br>
+    <table border="3">
+        <tr>
+        <td><h1>S/N</h1></td>
+        <td><h1>TITLE</h1></td>
+        <td><h1>PRICE</h1></td>
+        <td><h1>DESCRIPTION</h1></td>
+         </tr>
+
+         <tr>
+             <td><h1>1</h1></td>
+             <td ><h1 id="title"></h1></td>
+             <td><h3 id="price"></h3></td>
+             <td><h3 id="description"></h3></td>
+         </tr>
+
+         <tr>
+            <td><h1>2</h1></td>
+            <td><h1 id="title2"></h1></td>
+            <td><h3 id="price2"></h3></td>
+            <td><h3 id="description2"></h3></td>
+        </tr>
+        <tr>
+            <td><h1>3</h1></td>
+            <td><h1 id="title3"></h1></td>
+            <td><h3 id="price3"></h3></td>
+            <td><h3 id="description3"></h3></td>
+        </tr>
+        <tr>
+            <td><h1>4</h1></td>
+            <td><h1 id="title4"></h1></td>
+            <td><h3 id="price4"></h3></td>
+            <td><h3 id="description4"></h3></td>
+        </tr>
+        <tr>
+            <td><h1>5</h1></td>
+            <td><h1 id="title5"></h1></td>
+            <td><h3 id="price5"></h3></td>
+            <td><h3 id="description5"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>6</h1></td>
+            <td><h1 id="title6"></h1></td>
+            <td><h3 id="price6"></h3></td>
+            <td><h3 id="description6"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>7</h1></td>
+            <td><h1 id="title7"></h1></td>
+            <td><h3 id="price7"></h3></td>
+            <td><h3 id="description7"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>8</h1></td>
+            <td><h1 id="title8"></h1></td>
+            <td><h3 id="price8"></h3></td>
+            <td><h3 id="description8"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>9</h1></td>
+            <td><h1 id="title9"></h1></td>
+            <td><h3 id="price9"></h3></td>
+            <td><h3 id="description9"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>10</h1></td>
+            <td><h1 id="title10"></h1></td>
+            <td><h3 id="price10"></h3></td>
+            <td><h3 id="description10"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>11</h1></td>
+            <td><h1 id="title11"></h1></td>
+            <td><h3 id="price11"></h3></td>
+            <td><h3 id="description11"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>12</h1></td>
+            <td><h1 id="title12"></h1></td>
+            <td><h3 id="price12"></h3></td>
+            <td><h3 id="description12"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>13</h1></td>
+            <td><h1 id="title13"></h1></td>
+            <td><h3 id="price13"></h3></td>
+            <td><h3 id="description13"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>14</h1></td>
+            <td><h1 id="title14"></h1></td>
+            <td><h3 id="price14"></h3></td>
+            <td><h3 id="description14"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>15</h1></td>
+            <td><h1 id="title15"></h1></td>
+            <td><h3 id="price15"></h3></td>
+            <td><h3 id="description15"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>16</h1></td>
+            <td><h1 id="title16"></h1></td>
+            <td><h3 id="price16"></h3></td>
+            <td><h3 id="description16"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>17</h1></td>
+            <td><h1 id="title17"></h1></td>
+            <td><h3 id="price17"></h3></td>
+            <td><h3 id="description17"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>18</h1></td>
+            <td><h1 id="title18"></h1></td>
+            <td><h3 id="price18"></h3></td>
+            <td><h3 id="description18"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>19</h1></td>
+            <td><h1 id="title19"></h1></td>
+            <td><h3 id="price19"></h3></td>
+            <td><h3 id="description19"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>20</h1></td>
+            <td><h1 id="title20"></h1></td>
+            <td><h3 id="price20"></h3></td>
+            <td><h3 id="description20"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>21</h1></td>
+            <td><h1 id="title21"></h1></td>
+            <td><h3 id="price21"></h3></td>
+            <td><h3 id="description21"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>22</h1></td>
+            <td><h1 id="title22"></h1></td>
+            <td><h3 id="price22"></h3></td>
+            <td><h3 id="description22"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>23</h1></td>
+            <td><h1 id="title23"></h1></td>
+            <td><h3 id="price23"></h3></td>
+            <td><h3 id="description23"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>24</h1></td>
+            <td><h1 id="title24"></h1></td>
+            <td><h3 id="price24"></h3></td>
+            <td><h3 id="description24"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>25</h1></td>
+            <td><h1 id="title25"></h1></td>
+            <td><h3 id="price25"></h3></td>
+            <td><h3 id="description25"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>26</h1></td>
+            <td><h1 id="title26"></h1></td>
+            <td><h3 id="price26"></h3></td>
+            <td><h3 id="description26"></h3></td>
+        </tr>
+
+        <tr>
+            <td><h1>27</h1></td>
+            <td><h1 id="title27"></h1></td>
+            <td><h3 id="price27"></h3></td>
+            <td><h3 id="description27"></h3></td>
+        </tr>
+    </table>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <Marquee behavior = "alternate" direction= "right"><P style="font-size: 40px; font-weight: bold; color:#888;">Thanks for your patronage</P></Marquee>
+    <script src="tableproduct.js"></script>
+</body>
+</html>
